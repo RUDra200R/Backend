@@ -1,4 +1,4 @@
-// Api formation and Cors
+// Api formation and cors option 
 const cookieParser = require('cookie-parser')
 const cors = require('cors')
 const express = require('express')
@@ -6,6 +6,7 @@ const express = require('express')
 require('dotenv').config()
 const app = express()
 
+// Remember to add your host website domain in place of * in origin
 var corsOptions = {
     origin: '*',
 }
