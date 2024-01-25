@@ -1,4 +1,4 @@
-// Api formation
+// Api formation and Cors
 const cookieParser = require('cookie-parser')
 const cors = require('cors')
 const express = require('express')
