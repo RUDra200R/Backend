@@ -1,4 +1,4 @@
-// registration.js
+// Main code for connection
 
 async function registerUser() {
   const registrationForm = document.getElementById('registrationForm');
