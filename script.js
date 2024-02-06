@@ -29,7 +29,6 @@ async function registerUser() {
 }
 
 // login.js
-
 async function loginUser() {
   const loginForm = document.getElementById('loginForm');
   const formData = new FormData(loginForm);
@@ -45,8 +44,9 @@ async function loginUser() {
 
     if (response.ok) {
       const result = await response.json();
-      alert(`Login successful!\n${result.message}`);
-      // You may redirect the user to a dashboard or perform other actions here
+      // alert(`Login successful!\n${result.message}`);
+      // Redirect the user to the main page
+      window.location.href = '/demo.html'; // Replace with your main page URL
     } else {
       const errorData = await response.json();
       alert(`Login failed: ${errorData.error}`);
@@ -56,7 +56,6 @@ async function loginUser() {
     alert(`An error occurred during login. Please try again.\n${error.message}`);
   }
 }
-
 // logout.js
 
 async function logoutUser() {
@@ -82,6 +81,7 @@ async function logoutUser() {
     alert(`An error occurred during logout. Please try again.\n${error.message}`);
   }
 }
+
 
 
   
