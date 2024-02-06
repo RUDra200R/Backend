@@ -1,5 +1,6 @@
 // bring in prisma and cookie
 
+const bcrypt = require('bcryptjs')
 const prisma = require('../prisma/index')
 
 const cookieToken = require('../utils/cookieToken')
@@ -19,7 +20,8 @@ exports.signup = async(req, res, next) =>{
             data: {
                 name,
                 email,
-                password,
+                password
+                // createdAt: new Date()
             }
         })
 
@@ -35,12 +37,13 @@ exports.signup = async(req, res, next) =>{
 }
 
 //User login
-
 exports.login = async(req, res, next)=>{
     try{
         const {email, password} = req.body
+        
+
         if (!email || !password){
-            return res.status(401).json({ error : "Email and Password are required"})
+            return res.status(400).json({ error : "Email and Password are required"})
         }
 
         // find a user base on email
@@ -70,6 +73,7 @@ exports.login = async(req, res, next)=>{
         throw new Error(error)
     }
 }
+
 
 // logout user
 
