@@ -1,84 +1,91 @@
-<!-- index.html -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registration Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" dir="ltr">
+    <title>Company Name</title>
+    <link rel="icon" href="./images/company-logo.jpg">
+    <link rel="stylesheet" href="./styles.css">
+
 </head>
+
 <body>
 
-  <h2>Registration Form</h2>
-
- <!-- registration.html -->
-
-<form id="registrationForm">
-  <label for="name">Name:</label>
-  <input type="text" id="name" name="name" required>
-
-  <label for="email">Email:</label>
-  <input type="email" id="email" name="email" required>
-
-  <label for="password">Password:</label>
-  <input type="password" id="password" name="password" required>
-
-  <button type="button" onclick="registerUser()">Register</button>
-</form>
-
-<hr><hr>
-
-<!-- <form id="loginForm">
-  <h2>Login</h2>
-  <label for="email">Email:</label>
-  <input type="email" id="email" name="email" required>
-  <br>
-  <label for="loginPassword">Password:</label>
-  <input type="password" id="loginPassword" name="loginPassword" required>
-  <br>
-  <button type="button" onclick="loginUser()">Login</button>
-  <script src="login.js"></script>
-</form> -->
-
-<!-- login.html -->
-
-<form id="loginForm">
-  <h2>Login</h2>
-  <label for="email">Email:</label>
-  <input type="email" id="email" name="email" required>
-  <br>
-  <label for="password">Password:</label>
-  <input type="password" id="password" name="password" required>
-  <br>
-  <button type="button" onclick="loginUser()">Login</button>
-</form>
 
 
-<!-- Logout Button -->
-<button type="button" onclick="logoutUser()">Logout</button>
+<!--            Navigation Bar          -->    
 
-  <script src="script.js"></script>
+<header class="container">
+    <nav id="nav">
+        <a href="./index.html"><img id="logo" src="./images/company-logo.jpg" width="50" height="50" alt="Website Logo"></a> 
+        <div class="mobile-menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-items" type="none">
+            <li><a href="./index.html" class="navopt">Home</a></li>
+            <li><a href="./service.html" class="navopt">Service</a></li>
+            <li><a href="./contact.html" class="navopt">Contact</a></li>
+            <li><a href="./about.html" class="navopt">About</a></li>
+            <li><a href="./Login.html" class="navopt">Login</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<!--            What We Do              -->
+    
+    <div class="div1">
+        <section class="milestone">
+            <strong><h1 class="centeredtext1">Converting CCTV Surveillance...</h1>
+            <h1 class="centeredtext2">into Smart anomaly Detector!</h1>
+            </strong>
+            <div>
+            <p class="centerbelowtext">This Cultivated Model Will be integrated in the<br>
+                                    CCTV Surveillance system for convenient Detection of <br>
+                                    any anomalie from a visible Screen!!!</p>
+            </div>
+        </section>
+        
+    </div>
+
+
+<!--                Footer                  -->
+
+
+<footer>
+        <div class="footer-columns">
+            <div class="footer-column1">
+                <h3>Viksit <br>Bharat</h3>
+                <p>Email: <a href="mailto:#">nothing@gmail.com</a> </p>
+                <p>Phone: <a href="tel:#">+91 2568456239</a> </p>
+            </div>
+        
+            <div class="footer-column2">
+                <ul lass="foot-list"> 
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./service.html">Services</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column3">
+                <img src="./images/company-logo.jpg" alt="Company Logo" style="width: 70px; height: 70px;">
+                <p>Anomaly Detection Using Computer Vision</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+<!--                Java Script                  -->
+
+    <script src="./main.js"></script>
+    <script src="./script.js"></script>
+
 </body>
+
 </html>
-<!-- <form id="loginForm">
-  <h2>Login</h2>
-  <label for="loginUsername">Username:</label>
-  <input type="text" id="loginUsername" name="username" required>
-  <br>
-  <label for="loginPassword">Password:</label>
-  <input type="password" id="loginPassword" name="password" required>
-  <br>
-  <button type="button" onclick="loginUser()">Login</button>
-</form>
-
-<hr>
-
-Logout Button -->
-<!-- <button type="button" onclick="logoutUser()">Logout</button>
-
-<script src="registration.js"></script>
-<script src="login.js"></script>
-<script src="logout.js"></script> -->
-
-
-

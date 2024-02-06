@@ -10,15 +10,18 @@ const cookieToken = require('../utils/cookieToken')
 exports.signup = async(req, res, next) =>{
 
     try{
-        const {name, email, password} = req.body
+        const {firstname, secondname, phoneno, email, password, organizationName } = req.body
         // check
-        if(!name || !email || !password){
+        if(!firstname || !secondname || !phoneno ||!email || !password || ! organizationName){
             return res.status(400).json({error: 'Please write fields'})
         }
 
         const user = await prisma.user.create({
             data: {
-                name,
+                firstname,
+                secondname,
+                phoneno,
+                organizationName,
                 email,
                 password
                 // createdAt: new Date()
@@ -49,10 +52,10 @@ exports.login = async(req, res, next)=>{
         // find a user base on email
         const user = await prisma.user.findUnique({
             where:{
-                email
-            }
+                email,
+                password
+            },
         })
-
         // when there is no user
         if(!user){
             return res.status(401).json({ error : "User not found!"})

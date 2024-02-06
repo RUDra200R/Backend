@@ -15,7 +15,8 @@ async function registerUser() {
 
     if (response.ok) {
       const result = await response.json();
-      alert(`User registered successfully!\n${result.message}`);
+      // alert(`User registered successfully!\n${result.message}`);
+      window.location.href = '/Login.html';
       // You may redirect the user to a login page or perform other actions here
     } else {
       const errorData = await response.json();
@@ -46,7 +47,7 @@ async function loginUser() {
       const result = await response.json();
       // alert(`Login successful!\n${result.message}`);
       // Redirect the user to the main page
-      window.location.href = '/demo.html'; // Replace with your main page URL
+      window.location.href = '/index.html'; // Replace with your main page URL
     } else {
       const errorData = await response.json();
       alert(`Login failed: ${errorData.error}`);
